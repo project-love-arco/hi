@@ -1,0 +1,278 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    /* Agregado: sombra de texto para mejorar contraste */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Encabezado */
+header {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos con fuente elegante */
+p, h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: white;
+}
+h3, .pregunta {
+    text-align: center; /* Centra el texto en h3 y .pregunta */
+    margin: 0;  /* Elimina márgenes para un mejor ajuste */
+}
+
+/* Corazón animado */
+h1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heart {
+    font-size: 1.5em;
+    color: red;
+    animation: floatHeart 3s infinite ease-in-out;
+}
+
+@keyframes floatHeart {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Contenido principal */
+main {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es largo */
+    /* Agregado: altura máxima */
+    max-height: 80vh;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos del artículo */
+article {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Contenedor de la imagen y texto */
+/* Contenedor de la imagen y texto */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Imagen alineada a la izquierda */
+.article-img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Asegura que las imágenes no sobrepasen el contenedor */
+}
+
+.nueva-imagen {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Asegura que las imágenes no sobrepasen el contenedor */
+}
+
+/* Texto alineado a la derecha */
+.text {
+    flex: 1;
+    font-size: 1.2em;
+}
+
+/* Botones */
+.buttons {
+    margin-top: 20px;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* Agregado: transiciones suaves */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Botón "Sí" */
+.yes {
+    background: #ff4d4d;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    border: 2px solid white; /* Agregado: borde para resaltar */
+}
+
+.yes:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
+
+/* Botón "No" */
+.no {
+    background: #444;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    border: 2px solid gray; /* Agregado: borde para resaltar */
+}
+
+.no:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la pantalla de respuesta */
+.response {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.response-img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambio de fondo al aceptar */
+.happy {
+    background: linear-gradient(120deg, #ff758c, #ff7eb3);
+    animation: colorShift 3s ease-in-out;
+}
+
+@keyframes colorShift {
+    from {
+        background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    }
+    to {
+        background: linear-gradient(120deg, #ff758c, #ff7eb3);
+    }
+}
+
+/* Media query para pantallas pequeñas */
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 574px) { 
+    .content {
+        display: block; /* Las imágenes y el texto estarán en bloque, uno debajo del otro */
+        align-items: center; /* Centra el contenido */
+        text-align: center; /* Centra el texto */
+    }
+
+    .article-img { 
+        width: 80%; /* Las imágenes ocuparán el 80% del ancho del contenedor */
+        max-width: 200px; /* Limita el tamaño máximo de las imágenes */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 10px 0; /* Espacio entre las imágenes */
+    }
+
+    .nueva-imagen {
+        width: 60%; /* Hace la nueva imagen más pequeña */
+        max-width: 150px; /* Limita el tamaño máximo de la nueva imagen */
+        height: 270px; /* Ajusta la altura de la nueva imagen */
+        margin: 10px 0; /* Espacio entre las imágenes */
+    }
+
+    .text {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        padding: 10px; /* Espacio alrededor del texto */
+    }
+    .buttons { 
+        flex-direction: row;  /* Asegura que los botones estén en una sola línea */
+        justify-content: center; /* Centra los botones horizontalmente */
+        gap: 10px; /* Espaciado entre los botones */
+        width: 100%; /* Ajuste de ancho para adaptarse */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px; /* Ajuste de tamaño de los botones */
+    }
+
+    p, h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-left: 20px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .pregunta { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Corazones cayendo */
+@keyframes heartFall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Caen hasta la parte inferior */
+        opacity: 0;
+    }
+}
+
+.heart-fall {
+    position: absolute;
+    font-size: 2em;
+    color: red;
+    animation: heartFall 3s infinite ease-in;
+    z-index: 100;
+    pointer-events: none; }
