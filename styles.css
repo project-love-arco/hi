@@ -198,7 +198,7 @@ button {
 
 /* Media query para pantallas pequeñas */
 /* Media query para pantallas pequeñas */
-@media screen and (max-width: 574px) { 
+@media screen and (max-width: 628px ) { 
     .content {
         display: block; /* Las imágenes y el texto estarán en bloque, uno debajo del otro */
         align-items: center; /* Centra el contenido */
