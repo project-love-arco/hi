@@ -204,13 +204,13 @@ button {
         align-items: center; /* Centra el contenido */
         text-align: center; /* Centra el texto */
     }
-
     .article-img { 
         width: 80%; /* Las imágenes ocuparán el 80% del ancho del contenedor */
         max-width: 200px; /* Limita el tamaño máximo de las imágenes */
         height: auto; /* Mantiene la proporción de las imágenes */
         margin: 10px 0; /* Espacio entre las imágenes */
-        margin-left: 25px;
+        margin-right: 25px; /* Añade espacio en el lado derecho */
+        float: right; /* Mueve la imagen hacia la derecha */
     }
 
     .nueva-imagen {
