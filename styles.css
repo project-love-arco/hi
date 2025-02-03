@@ -210,6 +210,7 @@ button {
         max-width: 200px; /* Limita el tamaño máximo de las imágenes */
         height: auto; /* Mantiene la proporción de las imágenes */
         margin: 10px 0; /* Espacio entre las imágenes */
+        margin-left: 25px;
     }
 
     .nueva-imagen {
@@ -276,3 +277,54 @@ button {
     animation: heartFall 3s infinite ease-in;
     z-index: 100;
     pointer-events: none; }
+
+    /* Estilos del Carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta las imágenes fuera del carrusel */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
